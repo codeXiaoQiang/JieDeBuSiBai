@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PictureView" customModule="百思不得其姐" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="248"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-4i-RYY">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="248"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y93-Pw-3Dg">
+                    <rect key="frame" x="0.0" y="210" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="e6z-cR-ufM"/>
+                    </constraints>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-Pk-A10">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1fJ-St-Frp">
+                    <rect key="frame" x="40" y="10" width="220" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="j4Q-lS-SP7"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKt-Ax-b4a" customClass="ProgressView" customModule="百思不得其姐" customModuleProvider="target">
+                    <rect key="frame" x="100" y="74" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="A0R-RA-hrJ"/>
+                        <constraint firstAttribute="height" constant="100" id="bKI-1J-vks"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1fJ-St-Frp" secondAttribute="trailing" constant="40" id="4i7-uh-1Ne"/>
+                <constraint firstAttribute="trailing" secondItem="xBe-4i-RYY" secondAttribute="trailing" id="Hem-mP-vAd"/>
+                <constraint firstAttribute="bottom" secondItem="xBe-4i-RYY" secondAttribute="bottom" id="Vy8-Lw-X1t"/>
+                <constraint firstItem="xBe-4i-RYY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a7t-zQ-BMc"/>
+                <constraint firstAttribute="bottom" secondItem="Y93-Pw-3Dg" secondAttribute="bottom" constant="8" id="fAp-zp-CXq"/>
+                <constraint firstItem="1fJ-St-Frp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="fpF-1o-EIi"/>
+                <constraint firstAttribute="trailing" secondItem="Y93-Pw-3Dg" secondAttribute="trailing" id="sJM-2M-Hn1"/>
+                <constraint firstItem="1fJ-St-Frp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="sbk-9m-Wz4"/>
+                <constraint firstItem="xBe-4i-RYY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="seJ-cs-V50"/>
+                <constraint firstItem="uKt-Ax-b4a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uht-SI-e52"/>
+                <constraint firstItem="uKt-Ax-b4a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wAt-zV-Kx8"/>
+                <constraint firstItem="Y93-Pw-3Dg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zhg-0m-Olf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifImageView" destination="bgo-Pk-A10" id="mwn-wJ-wQi"/>
+                <outlet property="loadProgress" destination="uKt-Ax-b4a" id="XJI-5I-JSq"/>
+                <outlet property="pictureBtn" destination="Y93-Pw-3Dg" id="4zA-TX-FTv"/>
+                <outlet property="pictureImageView" destination="xBe-4i-RYY" id="h20-ft-D4c"/>
+            </connections>
+            <point key="canvasLocation" x="230" y="285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>

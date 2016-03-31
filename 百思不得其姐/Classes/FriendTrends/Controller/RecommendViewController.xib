@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController" customModule="百思不得其姐" customModuleProvider="target">
+            <connections>
+                <outlet property="leftTableView" destination="WPn-p3-xF4" id="oK8-gw-8GM"/>
+                <outlet property="rightTableView" destination="Ily-75-6Tx" id="23l-VT-73J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-p3-xF4">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="M0M-bL-SfH"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pg5-0C-JyG"/>
+                        <outlet property="delegate" destination="-1" id="eE6-3A-8Lw"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ily-75-6Tx">
+                    <rect key="frame" x="60" y="0.0" width="540" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PZk-2z-nxG"/>
+                        <outlet property="delegate" destination="-1" id="Tub-ze-EtP"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WPn-p3-xF4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Eaf-jj-rzX"/>
+                <constraint firstItem="Ily-75-6Tx" firstAttribute="leading" secondItem="WPn-p3-xF4" secondAttribute="trailing" id="Fzb-5h-QKU"/>
+                <constraint firstAttribute="trailing" secondItem="Ily-75-6Tx" secondAttribute="trailing" id="Q7J-TK-tVE"/>
+                <constraint firstItem="Ily-75-6Tx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YHo-6z-9mw"/>
+                <constraint firstItem="WPn-p3-xF4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bok-95-9eA"/>
+                <constraint firstAttribute="bottom" secondItem="Ily-75-6Tx" secondAttribute="bottom" id="dt1-ud-tFL"/>
+                <constraint firstAttribute="bottom" secondItem="WPn-p3-xF4" secondAttribute="bottom" id="o3g-sA-aS2"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,60 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
+  - DOUAudioStreamer (0.2.15)
+  - KDCircularProgress (1.3.4)
+  - KRVideoPlayer (1.0.1)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - pop (1.0.9)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (2.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - DACircularProgress
+  - DOUAudioStreamer
+  - KDCircularProgress
+  - KRVideoPlayer
+  - MJExtension
+  - MJRefresh
+  - NJKWebViewProgress
+  - pop (~> 1.0)
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
+  KDCircularProgress: 4b29bf9bc9a915a731b8745ede6b89a55cda95ef
+  KRVideoPlayer: 08918da1b99cae35fd4c15b2ec2b49358d4c985f
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
+
+COCOAPODS: 0.39.0

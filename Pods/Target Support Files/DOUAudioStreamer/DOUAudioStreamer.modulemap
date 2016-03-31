@@ -1,0 +1,6 @@
+framework module DOUAudioStreamer {
+  umbrella header "DOUAudioStreamer-umbrella.h"
+
+  export *
+  module * { export * }
+}
