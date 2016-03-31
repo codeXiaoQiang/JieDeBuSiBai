@@ -18,36 +18,34 @@
 
 我们有时候会不会碰到这样的情况,代码写到一半,发现这种做法不行,又把几十行代码全删了,重新写,或者写着写着,不知道自己接下来要干嘛了,感觉自己突然死机了,大脑一片空白,我不知道你们是否出现过这样的情况没,反正在这之前,我老是犯这样的毛病后来发现一个很好的解决这种毛病的办法. `那就是写伪代码` 只有知道自己接下来要做什么,思路清晰了,写代码就快了,`只是把中文翻译成代码而已`下面举一个九宫格的例子
 
+`// 一行允许最多4列`
+``let maxCols = 4``
 
-``// 一行允许最多4列
-let maxCols = 4
+`// 定义按钮的宽度和高度`
+``let buttonW :CGFloat = ScreenWidth / (CGFloat)(maxCols)``
+``let buttonH :CGFloat = buttonW``
+``for var i = 0; i < sqaures.count; i++  {``
 
-// 定义按钮的宽度和高度
-let buttonW :CGFloat = ScreenWidth / (CGFloat)(maxCols)
-let buttonH :CGFloat = buttonW
-for var i = 0; i < sqaures.count; i++  {
+`// 创建按钮`
+``let button = SqaureButton(type: .Custom)``
 
-// 创建按钮
-let button = SqaureButton(type: .Custom)
+`// 监听按钮的点击`
+``button.addTarget(self, action: "buttonClick:", forControlEvents: .TouchUpInside)``
 
-// 监听按钮的点击
-button.addTarget(self, action: "buttonClick:", forControlEvents: .TouchUpInside)
+`// 传递模型数据,给属性赋值`
+``button.SqaureButtonModel = sqaures[i];``
+``self.addSubview(button)``
 
-// 传递模型数据,给属性赋值
-button.SqaureButtonModel = sqaures[i];
-self.addSubview(button)
+`// 计算按钮的frame`
+``let row:Int = i / maxCols``
+``let  col:Int = i % maxCols``
+``button.x = (CGFloat)(col) * buttonW``
+``button.y = (CGFloat)(row) * buttonH``
+``button.width = buttonW``
+``button.height = buttonH``
+`// 设置footer的高度`
 
-// 计算按钮的frame
-let row:Int = i / maxCols
-let  col:Int = i % maxCols
-button.x = (CGFloat)(col) * buttonW
-button.y = (CGFloat)(row) * buttonH
-button.width = buttonW
-button.height = buttonH
-
-// 设置footer的高度
-
-}
+}``
 ``
 
 
@@ -93,30 +91,23 @@ let fileExists:Bool = mgr.fileExistsAtPath(self, isDirectory: &isDirectory)``
 
 `dequeueReusableHeaderFooterViewWithIdentifier`这个方法只有在继承`UITableViewHeaderFooterView`才会敲出来继承UIView是敲不出来的
 
+``class CommentHeadView: UITableViewHeaderFooterView {``
+      `` var title:String? {``
+            ``didSet {``
+                 ``if let headerTitle = title {``
+                   `` titleLabel.text = headerTitle``
+                 ``}``
+           `` }``
+       ``}``
+  ``class func headerViewWithTableView(tableView:UITableView) -> UIView {``
+        ``var header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(ID)``
 
-`` class CommentHeadView: UITableViewHeaderFooterView {
+       if header == nil {
+       header = CommentHeadView()
+       }
+      return header!
+  }``
 
-var title:String? {
-
-didSet {
-
-if let headerTitle = title {
-
-titleLabel.text = headerTitle
-}
-}
-}
-
-class func headerViewWithTableView(tableView:UITableView) -> UIView {
-var header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(ID)
-
-if header == nil {
-header = CommentHeadView()
-
-}
-return header!
-} ``
-``
 
 
 * 3.`怎么实现oc方法,快速转化成swift方法`
@@ -202,7 +193,7 @@ latesArry = CommentModel.mj_objectArrayWithKeyValuesArray(dataobj)
 
 * `音频播放没有实现官方的播放效果`
 
-* 最后放一张项目gif动态图
+* 最后放一张项目图
 ![image](https://github.com/codeXiaoQiang/swift_JieDeBuSiBai/blob/master/3.png)
 
 
