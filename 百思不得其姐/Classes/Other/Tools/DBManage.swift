@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FMDB
+//import FMDB
 
 class DBManage: NSObject {
 

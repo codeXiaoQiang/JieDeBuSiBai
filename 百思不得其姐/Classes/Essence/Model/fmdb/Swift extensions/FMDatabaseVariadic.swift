@@ -6,7 +6,7 @@
 
 //  This extension inspired by http://stackoverflow.com/a/24187932/1271826
 
-import FMDB
+//import FMDB
 
 extension FMDatabase {
     
